@@ -28,10 +28,25 @@ func main() {
 		fmt.Scan(&option)
 		switch option {
 		case 1:
-			fmt.Println("Places: ", places)
-			fmt.Println("Orbits:", orbits)
-			fmt.Println("Vehicles: ", vehicles)
-			fmt.Println("Weathers: ", weathers)
+			fmt.Println("Places: ")
+			for _, place := range places {
+				place.DisplayDetails()
+			}
+
+			fmt.Println("Orbits: ")
+			for _, orbit := range orbits {
+				orbit.DisplayDetails()
+			}
+
+			fmt.Println("Vehicles: ")
+			for _, vehicle := range vehicles {
+				vehicle.DisplayDetails()
+			}
+
+			fmt.Println("Weathers: ")
+			for _, weather := range weathers {
+				weather.DisplayDetails()
+			}
 		case 2:
 			handleFirstCase(places, orbits, vehicles, weathers)
 		case 3:
